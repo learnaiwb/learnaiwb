@@ -1,0 +1,135 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer{
+  background-color:rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 底座 */
+.circle {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 10rpx 0;
+  position: relative;
+  z-index: 100;
+}
+
+/* 摇杆 */
+.needle {
+  width: 192rpx;
+  height: 274rpx;
+  position: relative;
+  left:60rpx;
+  top: -40rpx;
+  z-index: 99;
+  transform-origin: 40rpx 0;
+  transform: rotate(-20deg);
+  transition: transform 1s;
+}
+.needleClass {
+  transform: rotate(0deg);
+}
+.discContainer{
+  position: relative;
+  top:-170rpx;
+  width: 598rpx;
+  height: 598rpx;
+}
+
+.discAnimation {
+  animation: disc 8s linear infinite;
+  animation-delay: 1s;
+}
+/* 
+  @keyframes 设置动画帧
+  1.from to 使用简单动画，只有起始帧和结束帧
+  2.百分比 用于复杂动画，动画不止两帧
+*/
+@keyframes disc{
+  from{
+    transform: rotate(0deg) ;
+  }
+  to{
+    transform: rotate(360deg) ;
+  }
+}
+
+.disc {
+  height: 100%;
+  width: 100%;
+}
+
+.musicImg {
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+/* 进度条 */
+.progressControl{
+  position: absolute;
+  bottom: 200rpx;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  border: 1rpx solid red;
+}
+.barControl {
+  width: 450rpx;
+  height: 4rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: auto;
+  position: relative;
+}
+.audio-currentTime-Bar{
+  position: absolute;
+  top:0;
+  left:0;
+  /* width: 100rpx; */
+  z-index: 1;
+  height: 100%;
+  background-color: red;
+}
+.audio-circle{
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background-color: white;
+  right: -12rpx;
+  top: -4rpx;
+}
+
+
+/* 底部控制区 */
+.musicControl {
+  position: absolute;
+  bottom: 40rpx;
+  left:0;
+  border-top: 1rpx solid #fff;
+  width: 100%;
+  display: flex;
+}
+.musicControl text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 50rpx;
+}
+.big {
+  font-size: 80rpx;
+}

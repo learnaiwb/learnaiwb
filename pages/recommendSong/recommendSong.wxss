@@ -1,0 +1,77 @@
+/* pages/recommendSong/recommendSong.wxss */
+.recommendSource .header {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+}
+.recommendSource image{
+  width: 100%;
+  height: 100%;
+}
+.recommendSource .header .date {
+  position: absolute;
+  left:50%;
+  top:50%;
+
+  margin-left: -140rpx;
+  margin-top: -30rpx;
+  width: 300rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+
+  color: white;
+}
+/* 列表区样式 */
+.listContainer{
+  position: relative;
+  top:-20rpx;
+  padding: 0 20rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+.listHeader {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.listHeader .changeMore {
+  float: right;
+}
+/* 内容区 */
+.listScroll {
+  height: calc(100vh - 380rpx);
+}
+
+
+.scrollItem {
+  display: flex;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.musicInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.musicInfo text {
+  height:40rpx ;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.listScroll image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+}
+.scrollItem .iconfont {
+    position: absolute;
+    right: 1%;
+    width: 80rpx;
+    height: 80rp;
+    line-height: 80rpx;
+    text-align: right;
+}
